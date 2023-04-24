@@ -39,3 +39,15 @@ function showCollection(array) {
   }
   console.log(showCollection(collection, 'title', 'artist', 'publiahed in'))
   // without this line 37 doesn't log and yet I feel this is wrong
+  function findByArtist(artist) {
+    let results = [];
+    for (let i =0; i < collection.length; i++) {
+        if (collection[i].artist === artist) {
+            results.push(collection[i]);
+        }
+    }
+    return results;
+}
+
+console.log(findByArtist("Rammstein"));
+console.log(findByArtist("Blackpink"));
